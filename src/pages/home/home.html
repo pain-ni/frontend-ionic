@@ -12,8 +12,14 @@
    <ion-item>
       <ion-card-header>
      <h1>Weekly Pain Levels</h1>
-     <button ion-button style="float:right">New Record</button>     
+     <ion-buttons start>
+      <button ion-button (click)="openModal()" style="float:right"> New Record
+        <span ion-text color="primary" showWhen="ios"></span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>     
    </ion-card-header>
+
    <ion-card-content>
      <canvas #barCanvas></canvas>
    </ion-card-content>

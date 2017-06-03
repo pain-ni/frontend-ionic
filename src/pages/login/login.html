@@ -8,16 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list inset>
-
-        <ion-item>
-            <ion-input id="email_field" type="text" placeholder="email@example.com"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-input id="password_field" type="password" placeholder="Password"></ion-input>
-        </ion-item>
-
-        <button ion-button full class="button">Login</button>
-
-    </ion-list>
+    <div class="forms">
+        <ion-list inset>
+            <ion-item>
+                <ion-input id="email_field" type="text" placeholder="email@example.com"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="password_field" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <div class="buttons">
+            <button class="button" ion-button full>Login</button><button class="button" ion-button full click="pushPage()">Register</button>
+        </div>
+    </div>
 </ion-content>
