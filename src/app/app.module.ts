@@ -14,10 +14,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    HomePage,
+    ListPage
   ],
   imports: [
     BrowserModule,
@@ -26,10 +26,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    HomePage,
+    ListPage
   ],
   providers: [
     StatusBar,
