@@ -4,9 +4,85 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Register</ion-title>
+    <button style="text-align:right" ion-button menuToggle>Test</button>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <div>
+        <ion-label>Username and password</ion-label>
+        <ion-list inset>
 
+            <ion-item>
+                <ion-input id="username_field" type="text" placeholder="Username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="email_field" type="text" placeholder="email@example.com"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="password_field" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="confirm_password_field" type="password" placeholder="Confirm Password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <!-- Pain areas: -->
+        <ion-label>Pain areas:</ion-label>
+        <ion-list radio-group>
+            <ion-item>
+                <ion-label>Neck</ion-label>
+                <ion-checkbox [(ngModel)]="burning"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Back</ion-label>
+                <ion-checkbox [(ngModel)]="pulsing"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Leg</ion-label>
+                <ion-checkbox [(ngModel)]="throbbing"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Sensory</ion-label>
+                <ion-checkbox [(ngModel)]="numb"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <!-- Pain types: -->
+        <ion-label>Pain type:</ion-label>
+        <ion-list radio-group>
+            <ion-item>
+                <ion-label>Burning</ion-label>
+                <ion-checkbox [(ngModel)]="burning"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Pulsing</ion-label>
+                <ion-checkbox [(ngModel)]="pulsing"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Throbbing</ion-label>
+                <ion-checkbox [(ngModel)]="throbbing"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Numb</ion-label>
+                <ion-checkbox [(ngModel)]="numb"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <!-- Duration: -->
+        <ion-label>Pain duration:</ion-label>
+        <ion-list radio-group>
+            <ion-item>
+                <ion-label>Weeks</ion-label>
+                <ion-radio checked="false" value="weeks"></ion-radio>
+            </ion-item>
+        </ion-list>
+        <!-- average pain score: -->
+        <ion-label>Average pain score:</ion-label>
+        <ion-item>
+            <ion-range min="0" max="10" step="1" snaps="true"[(ngModel)]="pain_level">
+                <ion-icon range-left small name="sunny"></ion-icon>
+                <ion-icon range-right name="sunny"></ion-icon>
+            </ion-range>
+        </ion-item>
+
+        <button ion-button full class="button">Register</button>
+    </div>
 </ion-content>
