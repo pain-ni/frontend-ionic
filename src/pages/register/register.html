@@ -8,5 +8,77 @@
 </ion-header>
 
 <ion-content padding>
+    <div>
+        <ion-label>Username and email:</ion-label>
+        <ion-list inset>
+            <ion-item>
+                <ion-input id="username_field" type="text" placeholder="Username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="email_field" type="text" placeholder="email@example.com"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-label>Password:</ion-label>
+        <ion-list inset>
+            <ion-item>
+                <ion-input id="password_field" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="confirm_password_field" type="password" placeholder="Confirm Password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <!-- Pain fields: -->
+        <ion-label>Pain questions:</ion-label>
+        <!-- Pain areas: -->
+        <ion-item>
+        <ion-label>Pain areas:</ion-label>
+            <ion-select [(ngModel)]="pain_areas" multiple="true" cancelText="Cancel" okText="Confirm">
+                <ion-option value="neck">Neck</ion-option>
+                <ion-option value="back">Back</ion-option>
+                <ion-option value="leg">Leg</ion-option>
+                <ion-option value="sensory">Sensory</ion-option>
+            </ion-select>
+        </ion-item>
+        <!-- Pain types: -->
+        <ion-item>
+        <ion-label>Pain type:</ion-label>
+            <ion-select [(ngModel)]="pain_type" multiple="true" cancelText="Cancel" okText="Confirm">
+                <ion-option value="burning">Burning</ion-option>
+                <ion-option value="pulsing">Pulsing</ion-option>
+                <ion-option value="throbbing">Throbbing</ion-option>
+                <ion-option value="numb">Numb</ion-option>
+            </ion-select>
+        </ion-item>
+        <!-- average pain score: -->
+        <ion-item>
+            <ion-label>Average pain level:</ion-label>
+            <ion-range min="0" max="10" step="1" pin="true" snaps="true"[(ngModel)]="pain_level">
+                <ion-icon range-left small name="weak">0</ion-icon>
+                <ion-icon range-right name="strong">10</ion-icon>
+            </ion-range>
+        </ion-item>
+        <!-- Duration: -->
+        <ion-item>
+        <ion-label>Frequency of pain:</ion-label>
+            <ion-select [(ngModel)]="duration" multiple="true" cancelText="Cancel" okText="Confirm">
+                <ion-option value="days">Days</ion-option>
+                <ion-option value="weeks">Weeks</ion-option>
+                <ion-option value="months">Months</ion-option>
+                <ion-option value="years">Years</ion-option>
+            </ion-select>
+        </ion-item>
+        <!-- Pain times: -->
+        <ion-item>
+        <ion-label>Times when experiencing pain:</ion-label>
+            <ion-select [(ngModel)]="pain_day_time" multiple="true" cancelText="Cancel" okText="Confirm">
+                <ion-option value="morning">Morning</ion-option>
+                <ion-option value="afternoon">Afternoon</ion-option>
+                <ion-option value="evening">Evening</ion-option>
+                <ion-option value="night">Night</ion-option>
+                <ion-option value="all_day">All Day</ion-option>
+            </ion-select>
+        </ion-item>
 
+        <button ion-button full class="button">Register</button>
+    </div>
 </ion-content>

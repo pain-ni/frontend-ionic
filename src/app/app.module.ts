@@ -11,13 +11,16 @@ import { RegisterPage } from '../pages/register/register';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HomePage as ModalBasicPage, ModalContentPage } from '../pages/home/home';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ModalContentPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ModalContentPage
   ],
   providers: [
     StatusBar,
