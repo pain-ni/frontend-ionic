@@ -31,33 +31,69 @@
                 </ion-item>
             </ion-list>
         </div>
-        <!-- Pain fields: -->
-        <ion-label>Pain questions:</ion-label>
-        <!-- Pain areas: -->
+        <!-- Skills and interests: -->
+        <ion-label>Skills and Interests:</ion-label>
+        <!-- skills: -->
         <div class="group">
             <ion-item>
-            <ion-label>Pain areas:</ion-label>
-                <ion-select [(ngModel)]="pain_areas" multiple="true" cancelText="Cancel" okText="Confirm">
-                    <ion-option value="neck">Neck</ion-option>
-                    <ion-option value="back">Back</ion-option>
-                    <ion-option value="leg">Leg</ion-option>
-                    <ion-option value="sensory">Sensory</ion-option>
+            <ion-label>Skills:</ion-label>
+                <ion-select [(ngModel)]="skills" multiple="true" cancelText="Cancel" okText="Confirm">
+                    <ion-option value="programming">Programming</ion-option>
+                    <ion-option value="coaching">Coaching</ion-option>
+                    <ion-option value="maths">Maths</ion-option>
+                    <ion-option value="physics">Physics</ion-option>
+                    <ion-option value="organising">Organising</ion-option>
+                    <ion-option value="cooking">Cooking</ion-option>
+                    <ion-option value="baking">Baking</ion-option>
+                    <ion-option value="driving">Driving</ion-option>
+                    <ion-option value="public_speaking">Public speaking</ion-option>
                 </ion-select>
             </ion-item>
         </div>
-        <!-- Pain types: -->
+        <!-- Interests: -->
         <div class="group">
             <ion-item>
-            <ion-label>Pain type:</ion-label>
-                <ion-select [(ngModel)]="pain_type" multiple="true" cancelText="Cancel" okText="Confirm">
-                    <ion-option value="burning">Burning</ion-option>
-                    <ion-option value="pulsing">Pulsing</ion-option>
-                    <ion-option value="throbbing">Throbbing</ion-option>
-                    <ion-option value="numb">Numb</ion-option>
+            <ion-label>Interest:</ion-label>
+                <ion-select [(ngModel)]="interests" multiple="true" cancelText="Cancel" okText="Confirm">
+                    <ion-option value="sports">Sports</ion-option>
+                    <ion-option value="computers">Computers</ion-option>
+                    <ion-option value="maths">Maths</ion-option>
+                    <ion-option value="dancing">Dancing</ion-option>
+                    <ion-option value="teaching">Teaching</ion-option>
+                    <ion-option value="organising">Organising</ion-option>
                 </ion-select>
             </ion-item>
         </div>
-        <!-- average pain score: -->
+        <!-- Education: -->
+        <ion-label>Education level:</ion-label>
+        <!-- Education level: -->
+        <div class="group">
+            <ion-item>
+            <ion-label>Education level:</ion-label>
+                <ion-select [(ngModel)]="organisation_type" multiple="false" cancelText="Cancel" okText="Confirm">
+                    <ion-option value="phd">PhD</ion-option>
+                    <ion-option value="masters">Master's Degree</ion-option>
+                    <ion-option value="undergraduate">Undergraduate Degree</ion-option>
+                    <ion-option value="alevel">A level's</ion-option>
+                    <ion-option value="gcse">GCSE's</ion-option>
+                </ion-select>
+            </ion-item>
+        </div>
+        <!-- Types of organisations: -->
+        <ion-label>Type of organisation you would like to get involved with:</ion-label>
+        <!-- Organisation type: -->
+        <div class="group">
+            <ion-item>
+            <ion-label>Organisation type:</ion-label>
+                <ion-select [(ngModel)]="organisation_type" multiple="true" cancelText="Cancel" okText="Confirm">
+                    <ion-option value="charity">Charity</ion-option>
+                    <ion-option value="sports_club">Sports Club</ion-option>
+                    <ion-option value="volunteering_group">Volunteering Group</ion-option>
+                    <ion-option value="youth_clubs">Youth Clubs</ion-option>
+                </ion-select>
+            </ion-item>
+        </div>
+        <!-- average pain score:
         <div class="group">
             <ion-label>Average pain level:</ion-label>
             <ion-item style="margin:0px;">
@@ -67,20 +103,25 @@
                 </ion-range>
             </ion-item>
         </div>
-        <!-- Duration: -->
+     Duration: -->
+     <!-- Availability: -->
+     <ion-label>Availability:</ion-label>
         <ion-item>
-        <ion-label>Frequency of pain:</ion-label>
-            <ion-select [(ngModel)]="duration" multiple="true" cancelText="Cancel" okText="Confirm">
-                <ion-option value="days">Days</ion-option>
-                <ion-option value="weeks">Weeks</ion-option>
-                <ion-option value="months">Months</ion-option>
-                <ion-option value="years">Years</ion-option>
+        <ion-label>Weekday availability:</ion-label>
+            <ion-select [(ngModel)]="weekday_availability" multiple="true" cancelText="Cancel" okText="Confirm">
+                <ion-option value="monday">Monday</ion-option>
+                <ion-option value="tuesday">Tuesday</ion-option>
+                <ion-option value="wednesday">Wednesday</ion-option>
+                <ion-option value="thursday">Thursday</ion-option>
+                <ion-option value="friday">Friday</ion-option>
+                <ion-option value="saturday">Saturday</ion-option>
+                <ion-option value="sunday">Sunday</ion-option>
             </ion-select>
         </ion-item>
-        <!-- Pain times: -->
+        <!-- Day times available: -->
         <ion-item>
-        <ion-label>Times when experiencing pain:</ion-label>
-            <ion-select [(ngModel)]="pain_day_time" multiple="true" cancelText="Cancel" okText="Confirm">
+        <ion-label>Day times available:</ion-label>
+            <ion-select [(ngModel)]="availability_times" multiple="true" cancelText="Cancel" okText="Confirm">
                 <ion-option value="morning">Morning</ion-option>
                 <ion-option value="afternoon">Afternoon</ion-option>
                 <ion-option value="evening">Evening</ion-option>
@@ -88,7 +129,6 @@
                 <ion-option value="all_day">All Day</ion-option>
             </ion-select>
         </ion-item>
-
         <button ion-button full class="button">Register</button>
     </div>
 </ion-content>
